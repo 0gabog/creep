@@ -1,7 +1,3 @@
---//====================================================\\--
---||			   CREATED BY SHACKLUSTER
---\\====================================================//--
- 
 wait(1)
  
 Player = game:GetService("Players").LocalPlayer
@@ -44,9 +40,7 @@ ABS = math.abs
 MRANDOM = math.random
 FLOOR = math.floor
  
---//=================================\\
---|| 	      USEFUL VALUES
---\\=================================//
+
  
 Animation_Speed = 3
 Frame_Speed = 1 / 60 -- (1 / 30) OR (1 / 60)
@@ -100,13 +94,7 @@ local APPLYGYRO = true
 local SONGS = {720006240,}
 local CHOSENSONG = MRANDOM(1,#SONGS)
  
---//=================================\\
---\\=================================//
- 
- 
---//=================================\\
---|| SAZERENOS' ARTIFICIAL HEARTBEAT
---\\=================================//
+
  
 ArtificialHB = Instance.new("BindableEvent", script)
 ArtificialHB.Name = "ArtificialHB"
@@ -140,12 +128,7 @@ game:GetService("RunService").Heartbeat:connect(function(s, p)
 	end
 end)
  
---//=================================\\
---\\=================================//
- 
---//=================================\\
---|| 	      SOME FUNCTIONS
---\\=================================//
+
  
 function Raycast(POSITION, DIRECTION, RANGE, IGNOREDECENDANTS)
 	return workspace:FindPartOnRay(Ray.new(POSITION, DIRECTION.unit * RANGE), IGNOREDECENDANTS)
@@ -501,9 +484,7 @@ function Particles(Which,Parent,Enabled)
 	end
 end
  
---//=================================\\
---||	     WEAPON CREATION
---\\=================================//
+
  
 local GUI = script.NameGui
 GUI.Parent = RootPart
@@ -708,9 +689,7 @@ BACKATTACHMENT2.Position = VT(-0.5, 0.5, 0.75)
  
 Humanoid.Died:Connect(FullBodyRegen)
  
---//=================================\\
---||			DAMAGING
---\\=================================//
+
  
 function ApplyDamage(Humanoid,Damage)
 	if Humanoid.Health == math.huge then
@@ -757,9 +736,7 @@ function ApplyAoE(POSITION,RANGE,MINDMG,MAXDMG,FLING,CAMSINSTAKILL,INSTAKILL)
 	end
 end
  
---//=================================\\
---||	ATTACK FUNCTIONS AND STUFF
---\\=================================//
+
  
 function Fireball()
 	ATTACK = true
@@ -1642,9 +1619,7 @@ function Devastor()
 	Rooted = false
 end
  
---//=================================\\
---||	 	 	MISC
---\\=================================//
+
  
 function Lock()
 	ATTACK = true
@@ -1771,9 +1746,7 @@ function Taunt()
 	Rooted = false
 end
  
---//=================================\\
---||	  ASSIGN THINGS TO KEYS
---\\=================================//
+
  
 function MouseDown(Mouse)
 	HOLD = true
@@ -1885,8 +1858,7 @@ end
 		KeyUp(NEWKEY)
 	end)
  
---//=================================\\
---\\=================================//
+
  
 function unanchor()
 	if UNANCHOR == true then
@@ -1904,9 +1876,7 @@ function unanchor()
 	end
 end
  
---//=================================\\
---||	WRAP THE WHOLE SCRIPT UP
---\\=================================//
+
  
 Humanoid.Changed:connect(function(Jump)
 	if Jump == "Jump" and (Disable_Jump == true) then
@@ -2113,16 +2083,8 @@ while true do
 	Humanoid.Name = "Searing Emperor"
 end
  
---//=================================\\
---\\=================================//
- 
- 
- 
- 
- 
---//====================================================\\--
---||			  		 END OF SCRIPT
---\\====================================================//--
+
+
 end))
 ParticleEmitter1.Name = "Regen"
 ParticleEmitter1.Parent = LocalScript0
